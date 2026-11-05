@@ -1,0 +1,82 @@
+name: Задача
+description: Любая работа в проекте — чертёж, код, урок, слайд, исследование
+title: "[Направление] Коротко, что сделать"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Одна задача — один понятный результат, который можно показать.
+        Если работа больше недели, разбейте её на несколько задач.
+  - type: dropdown
+    id: direction
+    attributes:
+      label: Направление
+      options:
+        - Механика
+        - Электроника
+        - Прошивка
+        - ПО робота (ROS 2)
+        - Веб / LMS
+        - Методика
+        - Защита и документы
+    validations:
+      required: true
+  - type: dropdown
+    id: criterion
+    attributes:
+      label: Какой критерий регламента закрывает
+      description: Если задача напрямую ни на что не влияет — «Не связано»
+      options:
+        - MVP
+        - Технические особенности
+        - Дизайн продукта
+        - Исследование
+        - Бизнес-модель
+        - Ресурсы и бюджет
+        - Команда
+        - Актуальность
+        - Цель SMART
+        - Дорожная карта
+        - Заказчик
+        - Не связано
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: Что сделать
+      placeholder: |
+        Например: смоделировать кронштейн лидара под крепление M3,
+        с учётом габаритов из контракта интерфейсов v0.
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Как поймём, что готово
+      description: Что именно будет приложено как результат
+      placeholder: |
+        - PDF-чертёж на Диске в 20_Механика
+        - рендер (PNG) в комментарии к этой задаче
+    validations:
+      required: true
+  - type: textarea
+    id: depends
+    attributes:
+      label: От чего зависит
+      description: Номера задач, без которых нельзя начать (#12), или «ни от чего»
+      placeholder: ни от чего
+  - type: dropdown
+    id: size
+    attributes:
+      label: Размер
+      options:
+        - S — до 2 часов
+        - M — день
+        - L — неделя (лучше разбить)
+  - type: checkboxes
+    id: anyone
+    attributes:
+      label: Кто может взять
+      options:
+        - label: Подходит любому участнику, профильные знания не нужны (поставьте метку «бери-любой»)
