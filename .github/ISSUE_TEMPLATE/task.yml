@@ -12,13 +12,12 @@ body:
     attributes:
       label: Направление
       options:
-        - Механика
-        - Электроника
+        - Моделирование и электротехника
         - Прошивка
         - ПО робота (ROS 2)
         - Веб / LMS
         - Методика
-        - Защита и документы
+        - Защита, финансы и документы
     validations:
       required: true
   - type: textarea
@@ -51,9 +50,8 @@ body:
     attributes:
       label: Размер
       options:
-        - S — до 2 часов
-        - M — день
-        - L — неделя (лучше разбить)
+        - S — День
+        - M — Неделя      
   - type: checkboxes
     id: anyone
     attributes:
