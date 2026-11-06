@@ -21,26 +21,6 @@ body:
         - Защита и документы
     validations:
       required: true
-  - type: dropdown
-    id: criterion
-    attributes:
-      label: Какой критерий регламента закрывает
-      description: Если задача напрямую ни на что не влияет — «Не связано»
-      options:
-        - MVP
-        - Технические особенности
-        - Дизайн продукта
-        - Исследование
-        - Бизнес-модель
-        - Ресурсы и бюджет
-        - Команда
-        - Актуальность
-        - Цель SMART
-        - Дорожная карта
-        - Заказчик
-        - Не связано
-    validations:
-      required: true
   - type: textarea
     id: what
     attributes:
